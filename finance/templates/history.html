@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock transaction history
+{% endblock %}
+
+{% block main %}
+     <!--<p>{{stockData}}</p>-->
+     <table class="table table-bordered table-striped" name="stockReport">
+        <thead>
+            <tr>
+                {% for header in tableHeaders %}
+                    <td>{{ header }}</td>
+                {% endfor %}
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for item in stockData %}
+                <tr>
+                    <td>
+                         {{ item.symbol }}
+                    </td>
+                    <td>
+                         {{ item.shares }}
+                    </td>
+                    <td>
+                         {{ item.name }}
+                    </td>
+                    <td>
+                         {{ item.price }}
+                    </td>
+
+                    <td>
+                        {{ item.timestamp }}
+                   </td>
+                </tr>
+            {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}
+    Buy Stock
+{% endblock %}
+
+{% block main %}
+    <form name="buyStock" action="/buy" method="POST">
+
+        <label><h2>Purchase stock:</h2></label><br>
+        <input name="stockSymbol" type="text" placeholder="Stock symbol"><br>
+        <input name="quantity" type="number" placeholder="Quantity"><br>
+        <button type="submit"> Purchase </button>
+
+    </form>
+    {% if confirmation != None %}
+    <h3> {{ confirmation }}</h3>
+    {% endif %}
+{% endblock %}

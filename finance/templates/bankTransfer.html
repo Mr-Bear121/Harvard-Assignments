@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}
+    Account Transfer
+{% endblock %}
+
+{% block main %}
+
+    <span class="inline-block align-right">
+        <a class="float-right" href="/addAccount">Add account</a>
+    </span>
+
+    <form action="/transfer" method="POST">
+        <div class=form-group id="accountsDisplay">
+
+            <label>Transfer to</label>
+            <select class="form-control" name="accountTo">
+                <option>select</option>
+                {% for item in accounts%}
+                <option> {{item.accounts}}</option>
+                {% endfor %}
+            </select>
+
+            <input class="form-control" name="cashAmount" placeholder="$">
+
+        </div>
+
+        <div class="form-control" id="formControls">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+
+    </form>
+{% endblock %}

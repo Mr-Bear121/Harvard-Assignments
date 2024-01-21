@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+    Add Account
+{% endblock %}
+
+{% block main %}
+    <form class=form-group name="addAccount" action="/addAccount" method="POST">
+        <input class=form-control name="accountName" id="accountName" placeholder="Account name">
+        <br>
+        <div name="formControls">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block main %}
+    <!--<p>{{stockData}}</p>-->
+    <table class="table table-bordered table-striped" name="stockReport">
+        <thead>
+            <tr>
+                {% for header in tableHeaders %}
+                    <td>{{ header }}</td>
+                {% endfor %}
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for item in stockData %}
+                <tr>
+                    <td>
+                         {{ item.symbol }}
+                    </td>
+                    <td>
+                         {{ item.totalShares }}
+                    </td>
+
+                    <td>
+                         {{ item.name }}
+                    </td>
+                    <td>
+                         {{ item.price }}
+                    </td>
+                    <td>
+                         {{ item.totalValue }}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="right"> Cash </td>
+                    <td>
+                        {{ item.cash}}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="right"> Total asset Value </td>
+                    <td>
+                        {{ item.totalValue + item.cash}}
+                    </td>
+                </tr>
+            {% endfor %}
+    </tbody>
+    </table>
+
+{% endblock %}
