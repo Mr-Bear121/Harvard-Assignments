@@ -1,0 +1,23 @@
+sort1 uses: TODO
+Bubble Sort
+
+How do you know?: TODO
+I am deciding which sort is in use based on efficiency aka "time".
+since, "at the end of this weeks lecture" we had a side by side comparison of how long it took for our sorts to work.
+I can cross reference the speed of the 3 sorts to determine which one is is the correct sort.
+
+Bubble sort is the slowest form of sorting. Sort 1 was the slowest of the 3 therefore sort 1 must be a bubble sort
+
+sort2 uses: TODO
+Merge sort.
+
+How do you know?: TODO
+how do I know that merge sort is used for 2?
+sort 2 was the fastest and I know merge sort is the fastests of the 3 sorting algorithms
+
+sort3 uses: TODO
+Selection sort
+
+How do you know?: TODO
+Selection sort, "in terms of speed" is average when compared to the other 2 sorting methods.
+sort 3 had an average speed therefore it should be a selection sort
