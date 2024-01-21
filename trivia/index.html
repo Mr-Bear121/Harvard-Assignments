@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function changeColor(button){
+               var pResponse = document.getElementById("response");
+
+                if (button.value == "true"){
+                    button.style.backgroundColor="green";
+                    pResponse.innerHTML="Correct!";
+                }else{
+                    button.style.backgroundColor="red";
+                    pResponse.innerHTML="Incorrect";
+                }
+
+            }
+            function checkShrtAnswr(){
+
+                var answerField = document.getElementById("textField");
+                var tResponse = document.getElementById("tResponse");
+
+                if(answerField.value.toLowerCase() == "cs50"){
+                    answerField.style.backgroundColor="green";
+                    tResponse.innerHTML="Correct!";
+                }else{
+                    answerField.style.backgroundColor="red";
+                    tResponse.innerHTML="Incorrect";
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>In Hitchhikers Guide to the Galaxy what was the answer to the universe?:</h3>
+                <button id= btn1 type="button" onclick= "changeColor(this)" value="true">42</button>
+                <button id= btn2 type="button" onclick= "changeColor(this)" value="false">Half a league</button>
+                <button id= btn3 type="button" onclick= "changeColor(this)" value="false">A clodpole</button>
+                <p id="response"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What was written on the rubber duck that was presented as a gift to the students who took this class.</h3>
+                <input id="textField" type = "text" placeholder = "Please input your answer here.">
+                <button type="button" onclick="checkShrtAnswr()">Check response</button>
+                <p id="tResponse"></p>
+
+            </div>
+        </div>
+    </body>
+</html>
